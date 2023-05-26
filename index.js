@@ -8,13 +8,13 @@ const questions = () => {
   return inquirer.prompt([
     {
       type: "input",
-      message: "Title of project:",
+      message: "What is your project name?",
       name: "title",
     },
     {
       type: "input",
       message:
-        "Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:",
+        "Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide!",
       name: "description",
     },
     {
@@ -23,37 +23,44 @@ const questions = () => {
       name: "content",
     },
     {
-      type: "checkbox",
-      message: "Installation:",
+      type: "input",
+      message: "What are the steps required to install your project?",
       name: "installation",
-      choices: ["HTML", "CSS", "JavaScript", "MySQL"],
     },
     {
       type: "input",
-      message: "Usage:",
+      message:
+        "How do you use this app? Provide instructions and examples for use (screenshots as needed)!",
       name: "usage",
     },
     {
       type: "list",
-      message: "License:",
+      message: "What kind of licence should your project have?",
       name: "license",
-      choices: [],
+      choices: ["MIT", "GNU GPLv3", "The Unlicense"],
+      default: ["MIT"],
     },
     {
       type: "input",
-      message: "Contributing:",
+      message: "Please share any guidelines for other developers on how to contribute!",
       name: "contributing",
     },
     {
       type: "input",
-      message: "Tests:",
+      message: "What command should be run to run tests?",
       name: "tests",
+      default: "npm test",
     },
     {
       type: "input",
-      message: "Questionsg:",
-      name: "questions",
-    }
+      message: "What is your GitHub username?",
+      name: "github",
+    },
+    {
+      type: "input",
+      message: "What is your email address?",
+      name: "email",
+    },
   ]);
 };
 
