@@ -2,11 +2,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
-const questions = [];
-
-inquirer
-  .prompt([
+//array of questions for user input
+const questions = () => {
+  //using inquirer to prompt questions to user
+  return inquirer.prompt([
     {
       type: "input",
       message: "Title of project:",
@@ -14,7 +13,8 @@ inquirer
     },
     {
       type: "input",
-      message: "Project Description:",
+      message:
+        "Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:",
       name: "description",
     },
     {
@@ -34,9 +34,10 @@ inquirer
       name: "usage",
     },
     {
-      type: "input",
+      type: "list",
       message: "License:",
       name: "license",
+      choices: [],
     },
     {
       type: "input",
@@ -52,15 +53,19 @@ inquirer
       type: "input",
       message: "Questionsg:",
       name: "questions",
-    },
-  ])
-  .then((data) => {
-    const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
+    }
+  ]);
+};
 
-    fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-      err ? console.log(err) : console.log("Success!")
-    );
-  });
+
+
+  // .then((data) => {
+  //   const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
+
+  //   fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
+  //     err ? console.log(err) : console.log("Success!")
+  //   );
+  // });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
