@@ -1,8 +1,8 @@
-c# ReadMe Generator
- ![Github licence](http://img.shields.io/badge/license-GNU GPLv3-blue.svg)
+# readme
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Description 
-  nothing to discribe
+  ffff
 
   ## Table of Contents
   * [Installation](#installation)
@@ -16,10 +16,11 @@ c# ReadMe Generator
   undefined
 
   ## Usage 
-  standardized reade me 
+  readme for projects
 
   ## License 
-  This project is license under GNU GPLv3
+  undefined
+  undefined
 
   ## Contributing 
   undefined
@@ -28,4 +29,4 @@ c# ReadMe Generator
   undefined
 
   ## Questions
-  If you have any questions about this projects, please contact me directly at x@g.com. You can view more of my projects at https://github.com/fffff.
+  If you have any questions about this projects, please contact me directly at gub@yah.com. You can view more of my projects at https://github.com/esztergb.
