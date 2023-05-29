@@ -1,10 +1,14 @@
-// TODO: Include packages needed for this application
+//packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-//array of questions for user input
+//linking to page where the readme is developed
+const generatePage = require("./utils/generateMarkdown");
+
+
+//array of questions for user input using inquirer
 const questions = () => {
-  //using inquirer to prompt questions to user
+  
   return inquirer.prompt([
     {
       type: "input",
@@ -63,22 +67,32 @@ const questions = () => {
     },
   ]);
 };
+  
+
+//Create a function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile("README.md")
 
 
 
-  // .then((data) => {
-  //   const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
-
-  //   fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-  //     err ? console.log(err) : console.log("Success!")
-  //   );
-  // });
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+questions()
+  // getting user answers
+  .then((answers) => {
+    return generatePage(answers);
+  })
+  // using data to display on page
+  .then((data) => {
+    return writeFile(data);
+  })
+  // catching errors
+  .catch((err) => {
+    console.log(err);
+  });
+}
 
 // Function call to initialize app
 init();
