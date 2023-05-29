@@ -1,8 +1,8 @@
-# readme
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# ReadMe Generator
+ [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
   
   ## Description 
-  ffff
+  discription
 
   ## Table of Contents
   * [Installation](#installation)
@@ -13,20 +13,20 @@
   * [Questions](#questions)
   
   ## Installation 
-  undefined
+  node index
 
   ## Usage 
-  readme for projects
+  readme for apps
 
   ## License 
+  This project is licensed under[Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)
   undefined
-  undefined
-
+  
   ## Contributing 
-  undefined
+  xx
 
   ## Tests
-  undefined
+  npm test
 
   ## Questions
-  If you have any questions about this projects, please contact me directly at gub@yah.com. You can view more of my projects at https://github.com/esztergb.
+  If you have any questions about this projects, please contact me directly at gubiscom. You can view more of my projects at https://github.com/esztergb.

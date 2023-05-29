@@ -29,6 +29,8 @@ function renderLicenseBadge(license) {
     return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
   } else if (license === licenseArr[7]) {
     return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+  } else {
+    return ""
   }
 };
 
@@ -36,27 +38,32 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license===licenseArr[0]){
-    return `(https://opensource.org/licenses/MIT)`;
+    return `[${licenseArr[0]}](https://opensource.org/licenses/MIT)`;
   } else if (license===licenseArr[1]){
-      return `(https://www.gnu.org/licenses/gpl-3.0)`;
+      return `[${licenseArr[1]}](https://www.gnu.org/licenses/gpl-3.0)`;
   } else if (license===licenseArr[2]){
-      return `http://unlicense.org`;
+      return `[${licenseArr[2]}](http://unlicense.org)`;
   } else if (license===licenseArr[3]){
-      return `https://www.gnu.org/licenses/agpl-3.0)`;
+      return `[${licenseArr[3]}](https://www.gnu.org/licenses/agpl-3.0)`;
   } else if (license===licenseArr[4]){
-      return `https://www.gnu.org/licenses/lgpl-3.0)`;
+      return `[${licenseArr[4]}](https://www.gnu.org/licenses/lgpl-3.0)`;
   } else if (license===licenseArr[5]){
-      return `https://opensource.org/licenses/MPL-2.0`;
+      return `[${licenseArr[5]}](https://opensource.org/licenses/MPL-2.0)`;
   } else if (license===licenseArr[6]){
-      return `https://opensource.org/licenses/Apache-2.0`;
+      return `[${licenseArr[6]}](https://opensource.org/licenses/Apache-2.0)`;
   } else if (license===licenseArr[7]){
-      return `https://www.boost.org/LICENSE_1_0.txt)`;
+      return `[${licenseArr[7]}](https://www.boost.org/LICENSE_1_0.txt)`;
+  } else {
+    return ""
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+  
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -75,23 +82,25 @@ function generateMarkdown(data) {
   * [Questions](#questions)
   
   ## Installation 
-  ${data.install}
+  ${data.installation}
 
   ## Usage 
   ${data.usage}
 
   ## License 
+  This project is licensed under ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license)}
-  ${renderLicenseLink(data.license)}
-
+  
   ## Contributing 
-  ${data.contributors}
+  ${data.contributing}
 
   ## Tests
-  ${data.test}
+  ${data.tests}
 
   ## Questions
-  If you have any questions about this projects, please contact me directly at ${data.email}. You can view more of my projects at https://github.com/${data.github}.
+  If you have any questions about this projects, please contact me directly at ${
+    data.email
+  }. You can view more of my projects at https://github.com/${data.github}.
 `;
 }
 

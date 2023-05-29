@@ -21,11 +21,6 @@ const questions = () => {
         "Provide a short description of your project!",
       name: "description",
     },
-    // {
-    //   type: "input",
-    //   message: "Table of Content:",
-    //   name: "content",
-    // },
     {
       type: "input",
       message: "What are the steps required to install your project?",
