@@ -18,14 +18,14 @@ const questions = () => {
     {
       type: "input",
       message:
-        "Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide!",
+        "Provide a short description of your project!",
       name: "description",
     },
-    {
-      type: "input",
-      message: "Table of Contents:",
-      name: "content",
-    },
+    // {
+    //   type: "input",
+    //   message: "Table of Content:",
+    //   name: "content",
+    // },
     {
       type: "input",
       message: "What are the steps required to install your project?",
@@ -41,7 +41,7 @@ const questions = () => {
       type: "list",
       message: "What kind of licence should your project have?",
       name: "license",
-      choices: ["MIT", "GNU GPLv3", "The Unlicense"],
+      choices: ["MIT", "GNU GPLv3", "The Unlicense", "GNU AGPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0"],
       default: ["MIT"],
     },
     {
@@ -70,12 +70,18 @@ const questions = () => {
   
 
 //Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile("README.md")
-
-
-
-}
+const writeFile = (data) => {
+  fs.writeFile("README.md", data, (err) => {
+    // if there is an error
+    if (err) {
+      console.log(err);
+      return;
+      // when the README has been created
+    } else {
+      console.log("Your README has been successfully created!");
+    }
+  });
+}; 
 
 // TODO: Create a function to initialize app
 function init() {
@@ -92,7 +98,7 @@ questions()
   .catch((err) => {
     console.log(err);
   });
-}
+};
 
 // Function call to initialize app
 init();
