@@ -17,8 +17,7 @@ const questions = () => {
     },
     {
       type: "input",
-      message:
-        "Provide a short description of your project!",
+      message: "Provide a short description of your project!",
       name: "description",
     },
     {
@@ -29,26 +28,38 @@ const questions = () => {
     {
       type: "input",
       message:
-        "How do you use this app? Provide instructions and examples for use (screenshots as needed)!",
+        "How do you use this app? Provide instructions and examples for use!",
       name: "usage",
     },
     {
       type: "list",
       message: "What kind of licence should your project have?",
       name: "license",
-      choices: ["MIT", "GNU GPLv3", "The Unlicense", "GNU AGPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0", "None"],
+      choices: [
+        "MIT",
+        "GNU GPLv3",
+        "The Unlicense",
+        "GNU AGPLv3",
+        "GNU LGPLv3",
+        "Mozilla Public License 2.0",
+        "Apache License 2.0",
+        "Boost Software License 1.0",
+        "None",
+      ],
     },
     {
       type: "input",
-      message: "Please share any guidelines for other developers on how to contribute!",
+      message:
+        "Please share any guidelines for other developers on how to contribute!",
       name: "contributing",
-      default: "Please follow Contributor Covenant Guidelines by clicking on the following link: "
+      default:
+        "Please follow Contributor Covenant Guidelines by clicking on the following link: ",
     },
     {
       type: "input",
       message: "What command should be run to run tests?",
       name: "tests",
-      default: "npm test",
+      default: "Simply use the application",
     },
     {
       type: "input",
