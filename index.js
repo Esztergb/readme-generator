@@ -5,7 +5,6 @@ const fs = require("fs");
 //linking to page where the readme is developed
 const generatePage = require("./utils/generateMarkdown");
 
-
 //array of questions for user input using inquirer
 const questions = () => {
   

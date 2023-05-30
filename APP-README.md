@@ -1,4 +1,4 @@
-# Readme Generator
+# <span style="color:gold">Readme Generator</span>
  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
@@ -27,7 +27,7 @@ This app generates a comprehensive README file based on user input.
 
 ## Usage 
 The application will be invoked by using the “node index” command
-*[Watch the video ](https://drive.google.com/file/d/1yktDGfr4OjhE1zE_3EJfcfBB_rjL0w-S/view)*
+*[Watch the video ](https://drive.google.com/file/d/1i6HxI4x-f-XP0JUGt7HG_rau6QvUyyWZ/view)*
   
 ## License
 This project is covered under the MIT licence.  
@@ -41,5 +41,5 @@ Please follow Contributor Covenant Guidelines by clicking on the following link:
 Simply use the application
 
 ## Questions
-If you have any questions about this projects, please contact me directly at gubiscom@yahoo.com. 
+If you have any questions about this projects, please *email me: gubiscom@yahoo.com* directly.  
 Please visit my [GitHub Page](https://github.com/Esztergb) to view more of my projects.
