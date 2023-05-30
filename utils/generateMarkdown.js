@@ -1,33 +1,27 @@
-//Licence array
-const licenseArr = [
-  "MIT",
-  "GNU GPLv3",
-  "The Unlicense",
-  "GNU AGPLv3",
-  "GNU LGPLv3",
-  "Mozilla Public License 2.0",
-  "Apache license 2.0",
-  "Boost Software License 1.0",
-];
-
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === licenseArr[0]) {
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-  } else if (license === licenseArr[1]) {
+  // if (license != "none") {
+  //   return `[![Licence:${license}](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(
+  //     license)})`;
+  // } else {
+  //   return ``;
+  // }
+  if (license === "MIT") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  } else if (license === "GNU GPLv3") {
     return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-  } else if (license === licenseArr[2]) {
+  } else if (license === "The Unlicense") {
     return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
-  } else if (license === licenseArr[3]) {
+  } else if (license === "GNU AGPLv3") {
     return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
-  } else if (license === licenseArr[4]) {
+  } else if (license === "GNU LGPLv3") {
     return "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
-  } else if (license === licenseArr[5]) {
+  } else if (license === "Mozilla Public License 2.0") {
     return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-  } else if (license === licenseArr[6]) {
+  } else if (license === "Apache license 2.0") {
     return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-  } else if (license === licenseArr[7]) {
+  } else if (license === "Boost Software License 1.0") {
     return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
   } else {
     return ""
@@ -37,37 +31,44 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license===licenseArr[0]){
-    return `[${licenseArr[0]}](https://opensource.org/licenses/MIT)`;
-  } else if (license===licenseArr[1]){
-      return `[${licenseArr[1]}](https://www.gnu.org/licenses/gpl-3.0)`;
-  } else if (license===licenseArr[2]){
-      return `[${licenseArr[2]}](http://unlicense.org)`;
-  } else if (license===licenseArr[3]){
-      return `[${licenseArr[3]}](https://www.gnu.org/licenses/agpl-3.0)`;
-  } else if (license===licenseArr[4]){
-      return `[${licenseArr[4]}](https://www.gnu.org/licenses/lgpl-3.0)`;
-  } else if (license===licenseArr[5]){
-      return `[${licenseArr[5]}](https://opensource.org/licenses/MPL-2.0)`;
-  } else if (license===licenseArr[6]){
-      return `[${licenseArr[6]}](https://opensource.org/licenses/Apache-2.0)`;
-  } else if (license===licenseArr[7]){
-      return `[${licenseArr[7]}](https://www.boost.org/LICENSE_1_0.txt)`;
+  if (license === "MIT") {
+    return `https://opensource.org/licenses/MIT`;
+  } else if (license === "GNU GPLv3") {
+    return `https://www.gnu.org/licenses/gpl-3.0`;
+  } else if (license === "The Unlicense") {
+    return `http://unlicense.org`;
+  } else if (license === "GNU AGPLv3") {
+    return `https://www.gnu.org/licenses/agpl-3.0`;
+  } else if (license === "GNU LGPLv3") {
+    return `https://www.gnu.org/licenses/lgpl-3.0`;
+  } else if (license === "Mozilla Public License 2.0") {
+    return `https://opensource.org/licenses/MPL-2.0`;
+  } else if (license === "Apache license 2.0") {
+    return `https://opensource.org/licenses/Apache-2.0`;
+  } else if (license === "Boost Software License 1.0") {
+    return `https://www.boost.org/LICENSE_1_0.txt`;
   } else {
-    return ""
+    return ``;
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
   
+  if (license != "None") {
+  return `## License
+  This project is covered under the ${license} licence.  
+  To learn more click on the following link: ${renderLicenseLink(license)}`;
+  } else {
+  return ``;
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+ 
  ${renderLicenseBadge(data.license)}
   
   ## Description 
@@ -86,13 +87,12 @@ function generateMarkdown(data) {
 
   ## Usage 
   ${data.usage}
-
-  ## License 
-  This project is licensed under ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}
   
-  ## Contributing 
+  ${renderLicenseSection(data.license)}
+
+  ## How to Contribute 
   ${data.contributing}
+  [Contributor Covenant](https://www.contributor-covenant.org/)
 
   ## Tests
   ${data.tests}

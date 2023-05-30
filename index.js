@@ -36,13 +36,13 @@ const questions = () => {
       type: "list",
       message: "What kind of licence should your project have?",
       name: "license",
-      choices: ["MIT", "GNU GPLv3", "The Unlicense", "GNU AGPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0"],
-      default: ["MIT"],
+      choices: ["MIT", "GNU GPLv3", "The Unlicense", "GNU AGPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0", "None"],
     },
     {
       type: "input",
       message: "Please share any guidelines for other developers on how to contribute!",
       name: "contributing",
+      default: "Please follow Contributor Covenant Guidelines by clicking on the following link: "
     },
     {
       type: "input",
